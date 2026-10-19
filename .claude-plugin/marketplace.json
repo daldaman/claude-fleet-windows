@@ -1,0 +1,6 @@
+{
+  "name": "fleet-windows",
+  "description": "A Claude Code mod that shows every Claude session running on a Windows machine: who needs you, branch, context size.",
+  "owner": { "name": "daldaman" },
+  "plugins": [{ "name": "fleet", "source": "./" }]
+}

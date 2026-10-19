@@ -1,0 +1,8 @@
+{
+  "name": "fleet",
+  "version": "0.1.0",
+  "description": "Every running Claude Code session on this Windows machine at a glance: who needs you, branch, uncommitted work, context size and whether its cache has gone cold",
+  "author": { "name": "daldaman", "url": "https://github.com/daldaman" },
+  "types": "./types/index.d.ts",
+  "license": "MIT"
+}
