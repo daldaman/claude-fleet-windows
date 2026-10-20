@@ -20,7 +20,7 @@ export const labelPrompt = (first: string[], latest: string[], lastReply: string
   ).slice(0, 5000)
 
 const cleanTitle = (text: string) =>
-  text.split('\n')[0].replace(/^(title:\s*)/i, '').replace(/["'`*#]/g, '').replace(/[.\s]+$/, '').trim().slice(0, 48)
+  text.split('\n')[0]!.replace(/^(title:\s*)/i, '').replace(/["'`*#]/g, '').replace(/[.\s]+$/, '').trim().slice(0, 48)
 
 // The label reply as JSON, or a bare title when the model skipped the JSON.
 export const parseLabel = (text: string): { title: string; value?: ResumeValue } | null => {

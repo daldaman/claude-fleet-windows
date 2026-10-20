@@ -160,7 +160,7 @@ describe('the PowerShell helper', () => {
     const one = parseHelperReply('\uFEFF{"procs":{"pid":7,"name":"claude","start":"5"},"files":null}')
     expect(one.procs).toEqual([{ pid: 7, name: 'claude', start: '5' }])
     expect(one.files).toEqual([])
-    const file = parseHelperReply('{"procs":[],"files":[{"path":"p","size":3,"lines":"x","error":null}]}').files[0]
+    const file = parseHelperReply('{"procs":[],"files":[{"path":"p","size":3,"lines":"x","error":null}]}').files[0]!
     expect(file.lines).toEqual(['x'])
     expect(file.error).toBeNull()
   })

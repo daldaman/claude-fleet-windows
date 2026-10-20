@@ -114,9 +114,10 @@ export const userPrompts = (jsonl: string) => {
 export const lastAssistantText = (jsonl: string) => {
   const lines = jsonl.split('\n')
   for (let i = lines.length - 1; i >= 0; i--) {
-    if (!lines[i].includes('"assistant"')) continue
+    const line = lines[i]!
+    if (!line.includes('"assistant"')) continue
     try {
-      const entry = JSON.parse(lines[i])
+      const entry = JSON.parse(line)
       if (entry.type !== 'assistant' || entry.isSidechain) continue
       const text = textOf(entry.message?.content).trim()
       if (text) return text
